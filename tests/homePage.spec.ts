@@ -29,6 +29,9 @@ test.describe.parallel('Basic functionalities check', () => {
     test.only(`Elements presence on the home page: ${url}`, async () => {
       await homePage?.open(url);
       await expect(homePage.destinationPicker).toBeVisible();
+      await expect(homePage.datePicker).toBeVisible();
+      await expect(homePage.transportationPicker).toBeVisible();
+      await expect(homePage.selectRoom).toBeVisible();
     });
   }
 });

@@ -11,7 +11,7 @@ export class HomePage {
     this.destinationPicker = this.page.locator("[name='destination_picker']");
     this.datePicker = this.page.locator("[name='date_picker']");
     this.transportationPicker = this.page.locator("[name='transportation_picker']");
-    this.selectRoom = this.page.locator("[name='test-select-room']");
+    this.selectRoom = this.page.locator("[class='i-textbox__main-wrapper']");
   }
 
   async open(url: string): Promise<void> {
