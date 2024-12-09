@@ -21,7 +21,7 @@ test.describe.parallel('Basic functionalities check', () => {
   });
 
   for (const url of urlList) {
-    test.only(`${url}`, async () => {
+    test.only(`Navigate to the homepage ${url}`, async () => {
       await homePage?.open(url);
       await expect(homePage.page).toHaveURL(url);
     });
