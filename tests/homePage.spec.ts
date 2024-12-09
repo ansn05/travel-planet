@@ -21,9 +21,14 @@ test.describe.parallel('Basic functionalities check', () => {
   });
 
   for (const url of urlList) {
-    test.only(`Navigate to the homepage ${url}`, async () => {
+    test(`Navigate to the homepage ${url}`, async () => {
       await homePage?.open(url);
       await expect(homePage.page).toHaveURL(url);
+    });
+
+    test.only(`Elements presence on the home page: ${url}`, async () => {
+      await homePage?.open(url);
+      await expect(homePage.destinationPicker).toBeVisible();
     });
   }
 });

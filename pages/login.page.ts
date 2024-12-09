@@ -14,7 +14,7 @@ export class LoginPage {
   }
 
   constructor(private page: Page) {
-    this.loginInput = this.page.getByTestId('login-input');
+    this.loginInput = this.page.getByTestId('login-input');this.loginInput = this.page.getByTestId('login-input');
     this.passwordInput = this.page.getByTestId('password-input');
     this.loginButton = this.page.getByTestId('login-button');
     this.loginError = this.page.getByTestId('error-login-id');
