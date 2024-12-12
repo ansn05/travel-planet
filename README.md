@@ -130,3 +130,6 @@
 ### Standards
 
 - Follow ECMA VSC settings “JS/TS › Implicit Project Config: Target” – actual ES2022
+
+### Tips
+- take a screenshot `await homePage.page.screenshot({path: "test.png", fullPage: true})`

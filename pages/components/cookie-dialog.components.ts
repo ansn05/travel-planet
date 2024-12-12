@@ -10,4 +10,11 @@ export class CookieDialog {
       "[id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']",
     );
   }
+
+  async ifCookiesModalWindowPresent(): Promise<void> {
+    if (await this.cookiesAllowButton.isVisible()) {
+      await this.cookiesAllowButton.click();
+    } else {
+    }
+  }
 }

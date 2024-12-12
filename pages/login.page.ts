@@ -16,16 +16,12 @@ export class LoginPage {
     await this.loginButton.click();
   }
   async openLoginForm(locator: Locator): Promise<void> {
-    this.homePage = new HomePage(this.page);
     locator.click();
   }
 
   constructor(private page: Page) {
-    this.loginInput = this.page.getByTestId('login_email');
-    this.passwordInput = this.page.getByTestId('login_password');
-    this.loginButton = this.page.getByTestId('login_submit');
-    this.loginError = this.page.locator("class='message__message u-mb-xxxs'");
-    this.errorMessage =
-      'Wypełniłeś formularz niepoprawnie. Spróbuj raz jeszcze.';
+    this.loginInput = this.page.locator('#login_email');
+    this.passwordInput = this.page.locator('#login_password');
+    this.loginButton = this.page.locator('#login_submit');
   }
 }

@@ -18,7 +18,6 @@ export class HomePage {
     this.selectRoom = this.page.locator("[class='i-textbox__main-wrapper']");
     this.loginTopButton = this.page.locator(
       "[class='btn btn--link m-top-2__link']",
-      
     );
     this.searchButton = this.page.locator("[name='btn_submit']");
   }
