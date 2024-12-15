@@ -1,13 +1,13 @@
 {
-  "name": "demo-bank-tests",
+  "name": "travel-planet-tests",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
-    "test:pulpit": "npm run test ./tests/pulpit.spec.ts -- --headed",
+    "test:holiday": "npm run test ./tests/holiday.spec.ts",
     "test:login": "npm run test ./tests/login.spec.ts",
-    "test:payment": "npm run test ./tests/payment.spec.ts"
+    "test:home": "npm run test ./tests/home.spec.ts"
   },
   "keywords": [],
   "author": "",
