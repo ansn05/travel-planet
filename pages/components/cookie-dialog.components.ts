@@ -10,7 +10,7 @@ export class CookieDialog {
       "[id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']",
     );
   }
-//close cookie dialog
+  //close cookie dialog
   async closeDialog(): Promise<void> {
     this.page.on('dialog', (dialog) => dialog.accept());
     if (await this.cookiesAllowButton.isVisible()) {

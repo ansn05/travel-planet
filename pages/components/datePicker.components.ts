@@ -15,7 +15,9 @@ export class DatePicker {
     this.confirmButton = this.page.locator(
       "[class='btn sf-popup__button-primary']",
     );
-    this.classIdDatePicker = this.page.locator('i-textbox__input i-textbox__input--ellipsis')
+    this.classIdDatePicker = this.page.locator(
+      'i-textbox__input i-textbox__input--ellipsis',
+    );
   }
   //select start and end dates on calendar
   async selectCalendarDate(startDate: number, endDate: number): Promise<void> {
@@ -24,6 +26,4 @@ export class DatePicker {
     await this.totalRow.nth(endDate).click();
     await this.confirmButton.click();
   }
-
- 
 }
