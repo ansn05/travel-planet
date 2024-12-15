@@ -15,7 +15,7 @@ elements.
 4. Offer selection: choose an offer from the search results.
 5. Offer page: ensure offer details load correctly
 
-- Patterns used POM, AAA, DRY 
+- Patterns used in project POM, AAA, DRY 
 
 ### Built With
 
@@ -47,11 +47,6 @@ npm install
 3. For first time installation run below command to download required browsers
 
 npx playwright install
-
-4. For MAC and Ubuntu OS before running please exexute below code as per your environment qa|dev
-
-export npm_config_ENV="qa"
-
 
 <!-- USAGE EXAMPLES-->
 
