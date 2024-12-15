@@ -120,7 +120,7 @@
 ### Debug
 
 - add to packages.json in section script: `test": "npx playwright test`
-  -run test from terminal npm run test
+- run test from terminal npm run test
 - run test from Explorer `NPM SCRIPTS`
 
 ### Format

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Dialog } from '@playwright/test';
 import { incorrectloginData } from '../test-data/login.data';
 import { LoginPage } from '../pages/login.page';
 import { HomePage } from '../pages/home.page';
@@ -12,6 +12,7 @@ test.describe.parallel('Basic functionalities check', () => {
   let cookieDialog: CookieDialog;
   let context;
   let errorMessage: ErrorMessage;
+  let dialog: Dialog;
 
   test.beforeEach(async ({ browser, page }) => {
     homePage = new HomePage(page);
@@ -23,11 +24,12 @@ test.describe.parallel('Basic functionalities check', () => {
   });
 
   for (const url of urlList) {
-    test(`unsuccessful login with invalid credentials ${url}`, async () => {
+    test(`unsuccessful login with invalid credentials: ${url}`, async () => {
       await homePage?.open(url);
-      cookieDialog.ifCookiesModalWindowPresent();
+
+      cookieDialog.closeDialog();
       await homePage.loginTopButton.click();
-      
+
       await loginPage.login(
         incorrectloginData.loginEmail,
         incorrectloginData.userPassword,
@@ -38,4 +40,3 @@ test.describe.parallel('Basic functionalities check', () => {
     });
   }
 });
-
